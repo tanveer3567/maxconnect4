@@ -1,0 +1,20 @@
+The evaluation function calucaltes
+	1. No. of 4 continues spots of same player in a row horizaontally, vertically and both diagonals as well.
+	2. No. of 3 continues spots of same player in a row horizaontally, vertically and both diagonals as well.
+	3. No. of 2 continues spots of same player in a row horizaontally, vertically and both diagonals as well.
+	4. No. of 1 continues spots of same player in a row horizaontally, vertically and both diagonals as well.
+
+4's has a weight of 1000.
+3's has a weight of 100
+2's has a weight of 10
+1's has a weight of 1
+
+Note:
+   1. Proof alpha beta pruning - for depth limit 8 , total no of leafs possible are 7^8 = 5,764,801‬. But the no of time evaluation functions is 
+      called is 103,404. This means it pruned the branched in such a way that 5,661,397‬ leaves got eliminated.(you can verify this by uncommenting the line 
+      number 15 in evaluation.py file).
+   2. Program may be little slow with increasing depths but it tends to gets fast as the no of spots get filled, 
+      the subroutine of the evaluation function i.e get counts has breaks and continue statements to eleminate rows and
+      coloumns that no longer can contribute to increasing players score.
+   3. The program always wins againts a random opponent and sub-optimal opponent, makes a draw against a optimal opponent.
+
